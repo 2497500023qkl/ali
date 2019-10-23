@@ -1,0 +1,47 @@
+*{
+    margin:0;
+    padding: 0;
+    border: 0;
+}
+.subject{
+    width: 400px;
+    margin:0 auto;
+}
+input{
+    margin-top:20px ;
+    width:398px;
+    height: 30px;
+    border: 1px solid#e4e4e4;
+}
+.tips{
+    margin-bottom:20px ;
+    font-size: 30px;
+}
+button{
+    width: 400px;
+    border: 1px solid orangered;
+    height: 30px;
+    color: #fff;
+    background-color: orangered;
+    margin-top:20px ;
+}
+.judge{
+    width: 398px;
+    height: 30px;
+
+    background-color: rgb(247, 219, 168);
+    border: 1px solid orangered;
+    line-height: 32px;
+}
+.judge img{
+    width: 20px;
+    height: 20px;
+    padding:5px 5px;
+}
+.judge div{
+    float: left;
+    visibility:hidden;
+}
+.judge{
+    visibility:hidden;
+}

@@ -1,0 +1,226 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration:none;
+}
+body{
+    background: #F4F4F4;
+}
+.zhu{
+    width: 1000px;
+    margin:  0 auto;
+}
+.zhu .shang{
+    width: 1000px;
+height: 320px;
+margin: 10px auto 0 auto;
+position: relative;
+overflow: hidden;
+}
+.you img{
+    width: 40px;
+    height: 40px;
+    margin-bottom:10px ;
+}
+.zhu .shang  .an{
+    width: 200px;
+    height: 10px;
+    position: absolute;
+    top: 270px;
+    left: 100px;
+}
+.zhu .shang .an .an1{
+    height: 10px;
+    width: 30px;
+    margin-right: 10px;
+    background-color: red;
+    float: left;
+}
+.zhu .shang .an .an2{
+    height: 10px;
+    width: 30px;
+    margin-right: 10px;
+    background-color: rgb(133, 133, 133);
+    float: left;
+}
+.zhu .shang .tu{
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+.zuo img{
+    width: 80px;
+    height: 80px;
+    text-align: center;
+    margin:40px auto 0 auto;
+}
+.zhu .shang .tu1{
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    visibility:hidden;
+}
+.zhu .shang .tu2{
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    visibility:hidden;
+}
+.zhu .shang .tu3{
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    visibility:hidden;
+}
+.zhu .shang .tu4{
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    visibility:hidden;
+}
+.zhu .xia{
+    margin: 30px auto 0 auto;
+    width: 1000px;
+    height: 300px;
+    display: flex;
+    position: relative;
+}
+.zhu .xia .zuo{
+    background-color: #fff;
+    height: 300px;
+    width: 690px;
+    display: flex;
+    text-align: center;
+}
+.zhu .xia .you{
+    position: absolute;
+    background-color: #fff;
+    height: 300px;
+    bottom: 0px;
+    right: 0px;
+    text-align: center;
+    width: 260px;
+}
+.user{
+    visibility:hidden;
+    position: absolute;
+    background-color: #fff;
+    height: 300px;
+    bottom: 0px;
+    right: 0px;
+    text-align: center;
+    width: 260px;
+}
+.user .information span{
+    color:rgb(185, 184, 187);
+}
+.user .information .value{
+    color: orange;
+}
+.user .button{
+    width: 100px;
+    height: 25px;
+    line-height: 25px;
+    margin:10px auto;
+    border: 1px solid orange;
+    color: orange;
+    text-align: center;
+}
+.username{
+    margin-top: 10px;
+    text-align: center;
+}
+.img{
+    margin-top: 20px;
+    width: 50px;
+    height: 50px;
+}
+.user .keeponrecord{
+    color: orange;
+    text-align: right;
+    margin-bottom:  15px;
+    padding-right: 50px;
+}
+.user .information div{
+    float: left;
+    width: 33%;
+    text-align: center;
+    margin-top:8px ;
+}
+.user .information{
+    border-top:2px solid #F4F4F4;
+    width:100%;
+    margin: 0 auto;
+}
+.zhu .xia .zuo .zuo1{
+    display: inline-flex;
+    flex-grow:1;
+    height: 260px;
+    margin-top: 20px;
+    text-align: center;
+    flex-direction:column;
+    border-right: 1px solid #eee;
+}
+.zhu .xia .zuo .zuo2{
+    display: inline-flex;
+    flex-grow:1;
+    flex-direction:column;
+    height: 260px;
+    margin-top: 20px;
+}
+.zhu .xia .zuo .weng{
+    margin:20px auto 0 auto;
+    line-height: 20px;
+    width: 200px;
+    text-align: center;
+    font-size: 20px;
+}
+.zhu .xia .zuo .zi{
+    margin:30px auto 0 auto;
+    line-height: 25px;
+    width: 200px;
+    text-align: center;
+    color:rgb(133, 133, 133);
+}
+.zhu .xia .you .dianji{
+    display: flex;
+    width: 200px;
+    margin:30px auto 0 auto;
+}
+.zhu .xia .you  .denglu{
+    width:95px;
+    height: 30px;
+    background-color: red;
+    border: 1px solid red;
+    color: #fff;
+    line-height: 30px;
+}
+.zhu .xia .you  .zhuce{
+    margin-left: 10px;
+    width:95px;
+    height: 30px;
+    border: 1px solid red;
+    background-color: #fff;
+    color: red;
+    line-height: 30px;
+}
+.zhu .xia .you  .connect{
+    margin-top: 60px;
+    text-align: center;
+    border-top:3px solid #F4F4F4;
+}
+.zhu .xia .you .wholenation{
+    line-height: 75px;
+    border-right: 1px solid gray;
+    padding-right: 6px;
+    color: red;
+}
+.zhu .xia .you .freeadmission{
+    color: red;
+    padding-left: 4px;
+}

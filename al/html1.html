@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js">
+        </script>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="html1.css">
+</head>
+<body>
+    <div class="zhu">
+        <div class="shang">
+            <img src="./img/5.jpg" alt=""class="tu">
+            <img src="./img/1.jpg" alt=""class="tu1">
+            <img src="./img/2.jpg" alt=""class="tu2">
+            <img src="./img/3.jpg" alt=""class="tu3">
+            <img src="./img/4.jpg" alt=""class="tu4">
+            <div class="an">
+                <div class="an1"></div>
+                <div class="an2"></div>
+                <div class="an2"></div>
+                <div class="an2"></div>
+                <div class="an2"></div>
+            </div>
+        </div>
+        <div class="xia">
+            <div class="zuo">
+                <div class="zuo1">
+                    <span class="weng">公司注册</span>
+                    <span class="zi">1对1免费咨询，助力创业第一步，部分地区仅需68元</span>
+                    <img src="./img/8.png" alt="">
+                </div>
+                <div class="zuo1">
+                    <span class="weng">企业用户权益专区</span>
+                    <span class="zi">企业用户享专属优惠与架构师1对1服务</span>
+                    <img src="./img/6.png" alt="">
+                </div>
+                <div class="zuo2">
+                    <span class="weng">企业级云服务器特惠</span>
+                    <span class="zi">I/O和网络性能都有SLA保障限时3年付3折</span>
+                    <img src="./img/7.png" alt="">
+                </div>
+            </div>
+            <div class="you">
+                <form action="">
+                        <img src="./img/10.png" alt="" class="img">
+                    <div class="shang2"><span>Hi!欢迎来到阿里云</span></div>
+                    <div class="dianji">
+                            <a href="./login.html"  class="denglu" >登入</a>  
+                            <a href=""  class="zhuce">注册</a>
+                    </div>
+                    <div class="connect">
+                        <a href="" class="wholenation">全民云计算</a>
+                        <a href="" class="freeadmission">免费试用</a>
+                    </div>
+                </form>
+            </div>
+            <div class="user">
+                <img src="" alt="" class="img">
+                <div class="username"></div>
+                <div class="button">控制台</div>
+                <div class="keeponrecord">备案专区</div>
+                <div class="information">
+                    <div class="substitutepayment"><span class="value"></span></br><span>代付款</span></div>
+                    <div class="renewal"><span class="value"></span></br><span>代续费</span></div>
+                    <div class="integral"><span class="value"></span></br><span>积分</span></div>
+                    <div class="voucher"><span class="value"></span></br><span>代金券</span></div>
+                    <div class="balance"><span class="value"></span></br><span>用户余额</span></div>
+                    <div class="creditvalue"><span class="value"></span></br><span>信用值</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var scs=$('.shang>img');
+        var aaa=$(".an").find("div");
+        var  pan=0;
+        aaa.eq(0).click(function(){
+            if(pan!=0){
+                pan=4;
+            lunbo();
+            }
+
+        })
+        aaa.eq(1).click(function(){
+            if(pan!=1){
+                pan=0;
+            lunbo();
+            }
+        })
+        aaa.eq(2).click(function(){
+            if(pan!=2){
+                pan=1;
+            lunbo();
+            }
+        })
+        aaa.eq(3).click(function(){
+            if(pan!=3){
+            pan=2;
+            lunbo();
+            }
+        })
+        aaa.eq(4).click(function(){
+            if(pan!=4){
+            pan=3;
+            lunbo();
+            }
+        })
+        function  lunbo(){
+            scs.css("visibility","hidden");
+            aaa.removeClass("an2");
+            aaa.removeClass("an1");
+            aaa.addClass("an2");
+            if(pan==0){
+                scs.eq(1).css("visibility","visible");
+                aaa.eq(1).removeClass("an2");
+                aaa.eq(1).addClass("an1");
+            }else if(pan==1){
+                scs.eq(2).css("visibility","visible");
+                aaa.eq(2).removeClass("an2");
+                aaa.eq(2).addClass("an1");
+            }else if(pan==2){
+                scs.eq(3).css("visibility","visible");
+                aaa.eq(3).removeClass("an2");
+                aaa.eq(3).addClass("an1");
+            }else if(pan==3){
+                scs.eq(4).css("visibility","visible");
+                aaa.eq(4).removeClass("an2");
+                aaa.eq(4).addClass("an1");
+            }else if(pan==4){
+                scs.eq(0).css("visibility","visible");
+                aaa.eq(0).removeClass("an2");
+                aaa.eq(0).addClass("an1");
+                pan=-1;
+            }
+            pan++;
+        }
+        setInterval(lunbo,3000);
+            $.get("http://playground.it266.com/profile",
+    {
+        token:localStorage.getItem('user_token'),
+    },
+    function(data){
+        if(data.status+""=="true"){
+            $(".user").eq(0).css("visibility","visible");
+            $(".you").eq(0).css("visibility","hidden");
+            $(".username").eq(0).html(data.data.username+"");
+            $('.img').eq(1).attr('src',data.data.avatar+"");
+            $('.value').eq(0).html("0");
+            $('.value').eq(1).html("0");
+            $('.value').eq(2).html(data.data.point+"");
+            $('.value').eq(3).html("0");
+            $('.value').eq(4).html(data.data.balance+"");
+            $('.value').eq(5).html(data.data.message+"");
+        }
+    }, "json");
+
+    </script>
+</body>
+</html>

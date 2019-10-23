@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js">
+        </script>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="./login.css">
+</head>
+<body>
+    <div class="subject">
+        <div class="tips">
+            密码登录
+        </div>
+        <div class="judge">
+            <div class="img"><img src="./img/9.png" alt=""></div>
+            <div class="judge1">登录名或密码不正确</div>
+        </div>
+            <form action="">
+                    <input type="text" placeholder="用户名至少4位">
+            </br>
+                    <input type="text" placeholder="密码不能为空">
+                </form>
+                <button>登入</button>
+    </div>
+    <script>
+        var login=$('button');
+        var input=$('input');
+        var judge1=$('.judge>div');
+        var judge2=$('.judge');
+        var datareturn;
+        var token;
+        login.eq(0).click(function(){
+            $.post("http://playground.it266.com/login",
+    {
+        username:input.eq(0).val(),
+        password:input.eq(1).val()
+    },
+    function(data){
+        dataretrun=data;
+        judge();
+    }, "json");
+  });
+  function judge(){
+        if(dataretrun.status+""=="true"){
+            token=dataretrun.data.token+"";
+            localStorage.setItem('user_token', token);
+            $(location).attr("href","./html1.html");
+        }else if(input.eq(0).val().length<4){
+            input.eq(0).val("");
+            input.eq(1).val("");
+            judge1.css("visibility","visible");
+            judge2.css("visibility","visible");
+            judge1.eq(1).html("用户名小于4");
+        }else if(input.eq(1).val().length==0){
+            input.eq(0).val("");
+            input.eq(1).val("");
+            judge1.css("visibility","visible");
+            judge2.css("visibility","visible");
+            judge1.eq(1).html("没输入密码");
+        }else{
+            input.eq(0).val("");
+            input.eq(1).val("");
+            judge1.css("visibility","visible");
+            judge2.css("visibility","visible");
+            judge1.eq(1).html(dataretrun.data+"");
+        }
+  }
+    </script>
+</body>
+
+</html>
